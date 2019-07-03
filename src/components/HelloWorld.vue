@@ -8,10 +8,13 @@
         <p class="subheading font-weight-regular">
           For help and collaboration with other OpenStacks developers,
           <br />please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank"
-            >Discord Community</a
-          >
+          <a href="https://community.vuetifyjs.com" target="_blank">
+            Discord Community
+          </a>
         </p>
+        <v-btn color="white">
+          <v-icon left>mdi-google</v-icon> Sign in with Google
+        </v-btn>
       </v-flex>
     </v-layout>
   </v-container>

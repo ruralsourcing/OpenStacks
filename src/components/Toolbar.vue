@@ -1,7 +1,7 @@
 <template>
   <v-toolbar app fixed clipped-left>
     <v-toolbar-side-icon @click="toggleDrawer()"></v-toolbar-side-icon>
-    <v-toolbar-title>OpenStacks</v-toolbar-title>
+    <v-toolbar-title>{{ name }}</v-toolbar-title>
     <v-spacer></v-spacer>
 
     <v-spacer></v-spacer>
@@ -14,11 +14,13 @@
 </template>
 
 <script>
+import config from '../../config.json'
 export default {
   props: {
     toggleDrawer: Function
   },
   data: () => ({
+    name: config.name || "OpenStacks",
     links: [
       { title: "Home", href: "/" },
       { title: "Rural Sourcing", href: "https://ruralsourcing.com" },
