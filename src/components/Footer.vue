@@ -1,31 +1,10 @@
 <template>
-  <v-footer
-    height="auto"
-    color="primary lighten-2"
-    app inset
-  >
-    <v-layout
-      justify-center
-      row
-      wrap
-    >
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        flat
-        round
-      >
-        {{ link }}
+  <v-footer height="auto" app inset light absolute>
+    <v-layout justify-center row wrap>
+      <v-btn v-for="link in links" :key="link" flat round color="primary">
+        <a :href="link.href">{{ link.title }}</a>
       </v-btn>
-      <v-flex
-        primary
-        lighten-3
-        py-3
-        text-xs-center
-        white--text
-        xs12
-      >
+      <v-flex py-3 text-xs-center xs12>
         &copy;2019 — <strong>Rural Sourcing</strong> — Apache 2.0
       </v-flex>
     </v-layout>
@@ -33,16 +12,24 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      links: [
-        'Home',
-        'About Us',
-        'Team',
-        'Services',
-        'Blog',
-        'Contact Us'
-      ]
-    })
-  }
+export default {
+  data: () => ({
+    links: [
+      { title: "Home", href: "/" },
+      { title: "Rural Sourcing", href: "https://ruralsourcing.com" },
+      { title: "Privacy Policy", href: "/privacy" },
+      { title: "Night Mode", href: "JavaScript:toggleDark()" }
+    ]
+  })
+};
 </script>
+
+<style lang="stylus" scoped>
+.v-footer
+  background-color: white
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.35)
+a
+  color: var(--v-primary-base)
+  text-decoration: none
+  font-weight: 400
+</style>
