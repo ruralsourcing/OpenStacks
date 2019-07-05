@@ -1,7 +1,7 @@
 <template>
   <v-toolbar app fixed clipped-left>
-    <v-toolbar-side-icon @click="toggleDrawer()"></v-toolbar-side-icon>
-    <v-toolbar-title>{{ name }}</v-toolbar-title>
+    <v-toolbar-side-icon><v-icon>mdi-earth</v-icon></v-toolbar-side-icon>
+    <v-toolbar-title >{{ name }}</v-toolbar-title>
     <v-spacer></v-spacer>
 
     <v-spacer></v-spacer>
@@ -16,9 +16,6 @@
 <script>
 import config from '../../config.json'
 export default {
-  props: {
-    toggleDrawer: Function
-  },
   data: () => ({
     name: config.name || "OpenStacks",
     links: [

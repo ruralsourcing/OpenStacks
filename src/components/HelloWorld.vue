@@ -15,6 +15,24 @@
         <v-btn color="white">
           <v-icon left>mdi-google</v-icon> Sign in with Google
         </v-btn>
+        <v-chip color="deep-purple lighten-2" dark>
+          <v-avatar color="deep-purple darken-4">
+            <v-icon>mdi-car-hatchback</v-icon>
+          </v-avatar>
+          Cars.com&nbsp;
+        </v-chip>
+        <v-chip color="red lighten-2" text-color="white" dark>
+          <v-avatar color="red darken-4">
+            <v-icon>mdi-home</v-icon>
+          </v-avatar>
+          RSI&nbsp;
+        </v-chip>
+        <v-chip color="blue lighten-2" text-color="white" dark>
+          <v-avatar color="blue darken-4">
+            <v-icon>mdi-airplane</v-icon>
+          </v-avatar>
+          Southwest&nbsp;
+        </v-chip>
       </v-flex>
     </v-layout>
   </v-container>
@@ -77,4 +95,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="stylus" scoped>
+</style>

@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
-    <NavigationDrawer :open="drawer" />
-    <Toolbar :toggleDrawer="toggleDrawer" />
+    <NavigationDrawer ref="drawer"/>
+    <Toolbar />
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
@@ -27,18 +27,6 @@ export default {
     Footer,
     NavigationDrawer,
     Toolbar
-  },
-  data: () => ({
-    counter: 1,
-    drawer: true
-  }),
-  props: {
-    source: String
-  },
-  methods: {
-    toggleDrawer() {
-      this.drawer = !this.drawer;
-    }
   }
 };
 </script>
