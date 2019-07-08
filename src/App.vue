@@ -6,7 +6,7 @@
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
           <v-flex shrink>
-            <HelloWorld />
+            <Home />
           </v-flex>
         </v-layout>
       </v-container>
@@ -16,14 +16,16 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+//import HelloWorld from "./components/HelloWorld";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import NavigationDrawer from "./components/NavigationDrawer";
 import Toolbar from "./components/Toolbar";
 
 export default {
   components: {
-    HelloWorld,
+    //HelloWorld,
+    Home,
     Footer,
     NavigationDrawer,
     Toolbar
