@@ -3,7 +3,7 @@
     <v-toolbar-side-icon><v-icon>mdi-earth</v-icon></v-toolbar-side-icon>
     <v-toolbar-title >{{ name }}</v-toolbar-title>
     <v-spacer></v-spacer>
-    
+
     <v-spacer></v-spacer>
     <strong>Jon Doe</strong>
     &nbsp;&nbsp;&nbsp;&nbsp;
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.v-toolbar
+.v-toolbar.theme--light
   background-color: white;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
 </style>

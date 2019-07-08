@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="auto" app inset light absolute>
+  <v-footer height="auto" app inset absolute>
     <v-layout justify-center row wrap>
       <v-btn v-for="link in links" :key="link.title" flat round color="primary" @click="showPrivacy()">
         {{ link.title }}
@@ -31,11 +31,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.v-footer
+.v-footer.theme--light
   background-color: white
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.35)
-a
-  color: var(--v-primary-base)
-  text-decoration: none
-  font-weight: 400
 </style>

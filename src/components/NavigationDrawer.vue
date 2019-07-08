@@ -14,7 +14,7 @@
           <v-icon color="blue darken-4">mdi-airplane</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-          <v-list-tile-title>Southwest</v-list-tile-title>
+          <v-list-tile-title>Southwest Airlines</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
       <v-list-tile v-on:click="alert('what')" class="deep-purple lighten-5">
@@ -79,5 +79,6 @@ export default {
 .v-list>div {
   margin: 5px;
   border-radius: 10px;
+  color: black;
 }
 </style>

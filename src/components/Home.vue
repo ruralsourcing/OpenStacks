@@ -3,6 +3,7 @@
     <v-layout row>
       <v-text-field
         solo
+        flat
         label="Search Questions"
         prepend-inner-icon="mdi-magnify"
         dense
@@ -12,7 +13,7 @@
       <v-spacer></v-spacer>
       <v-dialog v-model="dialog" width="700">
         <template v-slot:activator="{ on }">
-          <v-btn color="primary lighten-1" dark v-on="on">
+          <v-btn color="primary lighten-1" dark v-on="on" flat>
             New Question
           </v-btn>
         </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" light>
     <NavigationDrawer ref="drawer"/>
     <Toolbar />
     <v-content>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-//import HelloWorld from "./components/HelloWorld";
+//import Home from "./components/HelloWorld";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import NavigationDrawer from "./components/NavigationDrawer";
