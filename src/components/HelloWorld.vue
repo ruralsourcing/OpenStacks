@@ -6,11 +6,7 @@
           Welcome to OpenStacks
         </h1>
         <p class="subheading font-weight-regular">
-          For help and collaboration with other OpenStacks developers,
-          <br />please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank">
-            Discord Community
-          </a>
+          Use your Slack account on your company workspace to access OpenStacks
         </p>
         <v-btn color="primary" flat>
           <v-icon left>mdi-slack</v-icon> Sign in with Slack

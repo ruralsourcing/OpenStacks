@@ -87,54 +87,61 @@
         hide-actions
       >
         <template v-slot:header>
-          <v-layout align-center row spacer>
-            <v-flex xs4 sm2 md1>
-              <v-avatar size="36px">
-                <img
-                  v-if="message.avatar"
-                  src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                  alt="Avatar"
-                />
-                <v-icon
-                  v-else
-                  :color="message.color"
-                  v-text="message.icon"
-                ></v-icon>
-              </v-avatar>
-            </v-flex>
+          <v-layout column>
+            <v-layout align-center row spacer>
+              <v-flex xs4 sm2 md1>
+                <v-avatar size="36px">
+                  <img
+                    v-if="message.avatar"
+                    src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                    alt="Avatar"
+                  />
+                  <v-icon
+                    v-else
+                    :color="message.color + ' lighten-2'"
+                    v-text="message.icon"
+                  ></v-icon>
+                </v-avatar>
+              </v-flex>
 
-            <v-flex sm5 md3 hidden-xs-only>
-              <strong v-html="message.name"></strong>
-            </v-flex>
+              <v-flex sm5 md3 hidden-xs-only>
+                <strong v-html="message.name"></strong>
+              </v-flex>
 
-            <v-flex no-wrap xs5 sm3>
-              <v-chip
-                v-if="message.answers"
-                color="green lighten-3"
-                class="ml-0"
-                label
-                small
+              <v-flex no-wrap xs5 sm3>
+                <strong v-html="message.title"></strong>
+              </v-flex>
+
+              <v-flex
+                v-if="message.tags"
+                class="grey--text"
+                ellipsis
+                hidden-sm-and-down
               >
-                {{ message.answers }} Answers
-              </v-chip>
-              <strong v-html="message.title"></strong>
-            </v-flex>
-
-            <v-flex
-              v-if="message.tags"
-              class="grey--text"
-              ellipsis
-              hidden-sm-and-down
-            >
-              <v-chip
-                v-for="(tag, j) in message.tags"
+                <v-chip
+                  v-for="(tag, j) in message.tags"
+                  :key="j"
+                  color="grey darken-2"
+                >
+                  {{ tag }}
+                </v-chip>
+              </v-flex>
+            </v-layout>
+            <v-layout row>
+              <v-card
+                v-for="j in message.answers"
                 :key="j"
-                color="blue-grey lighten-4"
-                light
+                color="grey darken-2"
+                v-bind:class="{'answer-card': true, 'accepted-answer': j == 1}"
+                flat
               >
-                {{ tag }}
-              </v-chip>
-            </v-flex>
+                <v-card-title primary-title>
+                  <div>
+                    <div class="answer-card__content">It's simple. Lorem ipsum dolor sit amet.</div>
+                  </div>
+                </v-card-title>
+              </v-card>
+            </v-layout>
           </v-layout>
         </template>
 
@@ -286,3 +293,21 @@ export default {
   })
 };
 </script>
+
+<style lang="stylus" scoped>
+.answer-card
+  margin: 5px;
+  font-size: 0.8rem !important;
+  border-width: 1px !important;
+  border-color: transparent !important;
+  border-style: solid !important;
+  &.accepted-answer
+    border-color: var(--v-success-darken1) !important;
+  .v-card__title
+    padding: 16px;
+    .answer-card__content
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 160px;
+</style>

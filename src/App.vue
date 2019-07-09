@@ -1,30 +1,34 @@
 <template>
-  <v-app id="inspire" light>
-    <NavigationDrawer ref="drawer"/>
-    <Toolbar />
+  <v-app id="inspire" dark>
+    <NavigationDrawer ref="drawer" v-if="signedin" />
+    <Toolbar v-if="signedin"/>
     <v-content>
       <v-container fluid fill-height>
         <v-layout justify-center align-center>
           <v-flex shrink>
-            <Home />
+            <Home v-if="signedin" />
+            <HelloWorld v-else />
           </v-flex>
         </v-layout>
       </v-container>
     </v-content>
-    <Footer />
+    <Footer v-if="signedin" />
   </v-app>
 </template>
 
 <script>
-//import Home from "./components/HelloWorld";
+import HelloWorld from "./components/HelloWorld";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import NavigationDrawer from "./components/NavigationDrawer";
 import Toolbar from "./components/Toolbar";
 
 export default {
+  data: () => ({
+    signedin: false
+  }),
   components: {
-    //HelloWorld,
+    HelloWorld,
     Home,
     Footer,
     NavigationDrawer,

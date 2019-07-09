@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.v-toolbar.theme--light
-  background-color: white;
+.v-toolbar
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
 </style>
