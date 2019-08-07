@@ -25,7 +25,7 @@ import Toolbar from "./components/Toolbar";
 
 export default {
   data: () => ({
-    signedin: false
+    signedin: true
   }),
   components: {
     HelloWorld,
